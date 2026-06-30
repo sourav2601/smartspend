@@ -1,0 +1,29 @@
+﻿# Java / Maven
+backend/target/
+*.class
+
+# Node / Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Python / ML service
+ml-service/__pycache__/
+ml-service/*.pyc
+ml-service/.venv/
+ml-service/venv/
+
+# Environment files (never commit secrets)
+.env
+*.env
+backend/.env
+ml-service/.env
+frontend/.env
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
