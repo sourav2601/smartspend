@@ -42,7 +42,7 @@ public class MlClassifierClient {
                     .bodyValue(new MlServiceDtos.CategorizeRequest(description))
                     .retrieve()
                     .bodyToMono(MlServiceDtos.CategorizeResponse.class)
-                    .timeout(Duration.ofSeconds(3))
+                    .timeout(Duration.ofSeconds(35))
                     .onErrorResume(e -> {
                         log.log(Level.WARNING, "ML service call failed, falling back to 'Other'", e);
                         return Mono.just(new MlServiceDtos.CategorizeResponse("Other", 0.0));
